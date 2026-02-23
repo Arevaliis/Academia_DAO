@@ -1,5 +1,6 @@
 DROP DATABASE IF EXISTS academia;
 CREATE DATABASE academia;
+
 USE academia;
 
 CREATE TABLE alumnos (
@@ -22,7 +23,7 @@ CREATE TABLE cursos (
     nombre VARCHAR(100) NOT NULL,
     horas INT NOT NULL CHECK (horas > 59 and horas < 501),
     profesor_id INT,
-    
+
     CONSTRAINT fk_curso_profesor
         FOREIGN KEY (profesor_id)
         REFERENCES profesores(id)

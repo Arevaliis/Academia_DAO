@@ -1,6 +1,5 @@
 package util;
 
-import pasw.Contrasenya;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -13,9 +12,9 @@ public class PoolConexiones {
     // Inicializamos el pool
     static {
         HikariConfig config = new HikariConfig();
-        config.setJdbcUrl("jdbc:mysql://localhost:3306/academia");  // URL BBDD
+        config.setJdbcUrl("jdbc:mysql://localhost:3300/academia");  // URL BBDD
         config.setUsername("root");                                 // Usuario
-        config.setPassword(Contrasenya.pasw);                       // Contraseña
+        config.setPassword("root");                                 // Contraseña
         config.setMaximumPoolSize(10);                              // Máximo de conexiones en el pool
         config.setMinimumIdle(2);                                   // Conexiones mínimas inactivas
         config.setIdleTimeout(30000);                               // Tiempo máximo de inactividad (ms)
